@@ -1,8 +1,8 @@
 # React Responsive NavBar
 
 <div>
-<img src="/src/1.png" align="center" height="200" alt="pic-1">
-<img src="/src/3.png" align="center"  height="300"  alt="pic-3">
+<img src="/src/1.png" align="center" height="200" alt="pic-1"/>
+<img src="/src/3.png" align="center"  height="300"  alt="pic-3"/>
 </div>
 
 ---
