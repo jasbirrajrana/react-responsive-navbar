@@ -1,0 +1,133 @@
+.navbar {
+  position: sticky;
+  background-color: $color-dark;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    color: $color-sec;
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  &__menu-icon {
+    display: none;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 3rem;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    // margin-right: 2rem;
+  }
+
+  &__link {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $color-sec;
+      border-radius: 0.4rem;
+      transition: all 0.17s ease-out;
+      color: black;
+    }
+    &--mobo {
+      display: none;
+    }
+  }
+}
+
+.fa-react {
+  margin-left: 0.5rem;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar {
+    // position: relative;
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 50rem;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.4s ease-in-out;
+    }
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      margin-top: 1rem;
+      margin-left: 3rem;
+      margin-right: 3rem;
+
+      &:hover {
+        background-color: $color-sec;
+        padding: 2rem;
+      }
+      &--mobo {
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: 2rem auto;
+        border-radius: 0.4rem;
+        width: 80%;
+        background-color: $color-sec;
+        text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+
+        &:hover {
+          background-color: #fff;
+          transition: 250ms;
+        }
+      }
+    }
+
+    &__logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(25%, 50%);
+    }
+    &__menu-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 3rem;
+      cursor: pointer;
+    }
+  }
+  .active {
+    background-color: lighten($color-dark, $amount: 2);
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .fa-times {
+    transition: all 0.5s ease-out;
+    color: $color-sec;
+    font-size: 2.5rem;
+  }
+}

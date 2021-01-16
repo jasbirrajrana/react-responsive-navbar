@@ -1,0 +1,51 @@
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 0.4rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    padding: 0.8rem 2rem;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    color: #6568f4;
+    transition: 250ms;
+  }
+  & > a {
+    text-decoration: none;
+  }
+}
+
+.btn--primary {
+  background-color: $color-sec;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 0.4rem;
+  border: 1px solid $color-sec;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn--medium {
+  padding: 0.8rem 2rem;
+  border-radius: 0.4rem;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.btn--large {
+  padding: 1.2rem 2.6rem;
+  border-radius: 0.4rem;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+@media screen and (max-width: 960px) {
+  Button {
+    display: none;
+  }
+}
